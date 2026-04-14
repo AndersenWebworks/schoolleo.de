@@ -334,15 +334,30 @@
         .hero {
             padding: 4rem 0 4rem;
             background: linear-gradient(160deg, var(--bg-warm) 0%, #F5E0E0 40%, var(--bg-warm) 100%);
-            text-align: center;
+        }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        .hero-content {
+            flex: 1;
         }
         .hero h1 { margin-bottom: 1.25rem; }
-        .hero-logo {
-            width: 140px;
-            height: 140px;
+        .hero-logo-wrap {
+            flex-shrink: 0;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            box-shadow: 0 4px 20px rgba(139, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        .hero-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 33%;
+            transform: scale(1.55);
+            mix-blend-mode: multiply;
         }
         .hero h1 em {
             font-style: normal;
@@ -352,12 +367,11 @@
             font-size: 1.15rem;
             color: var(--text-light);
             max-width: 580px;
-            margin: 0 auto 2.5rem;
+            margin: 0 0 2.5rem;
         }
         .hero-ctas {
             display: flex;
             gap: 1rem;
-            justify-content: center;
             flex-wrap: wrap;
         }
         .btn {
@@ -393,7 +407,6 @@
             margin-top: 2.5rem;
             display: flex;
             gap: 2rem;
-            justify-content: center;
             flex-wrap: wrap;
             font-size: 0.9rem;
             color: var(--text-light);
@@ -908,6 +921,7 @@
 
         @media (min-width: 768px) {
             section { padding: 5.5rem 0; }
+            .hero-inner { gap: 3.5rem; }
             .ablauf-steps { grid-template-columns: repeat(3, 1fr); }
             .step { flex-direction: column; text-align: center; align-items: center; }
             .kontakt-grid { grid-template-columns: 1.3fr 1fr; }
@@ -920,6 +934,20 @@
             .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
             .nav-toggle { display: none; }
             .mobile-cta { display: none; }
+        }
+
+        @media (max-width: 767px) {
+            .hero-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-logo-wrap {
+                width: 180px;
+                height: 180px;
+            }
+            .hero-sub { margin-left: auto; margin-right: auto; }
+            .hero-ctas { justify-content: center; }
+            .hero-trust { justify-content: center; }
         }
 
         @media (max-width: 899px) {
@@ -969,8 +997,11 @@
 
 <!-- ==================== HERO ==================== -->
 <section class="hero" id="hero">
-    <div class="container">
-        <img src="img/logo.png" alt="SchoolLeo Logo" class="hero-logo">
+    <div class="container hero-inner">
+        <div class="hero-logo-wrap">
+            <img src="img/logo.png" alt="SchoolLeo Löwe" class="hero-logo">
+        </div>
+        <div class="hero-content">
         <h1>Nachhilfe in <em>Plau am See</em></h1>
         <p class="hero-sub">
             Ihr Kind braucht Unterstützung in der Schule? Bei SchoolLeo bekommt es genau die Hilfe, die es braucht – in allen Fächern, von Klasse 1 bis 10. Einzeln oder in der kleinen Gruppe. Und für viele Familien komplett kostenlos.
@@ -1003,6 +1034,7 @@
                 Ab 25 EUR / Stunde (Selbstzahler)
             </span>
         </div>
+        </div><!-- /.hero-content -->
     </div>
 </section>
 
@@ -1029,7 +1061,7 @@
             </div>
             <div class="vorteil-card fade-in">
                 <div class="vorteil-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary)"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--primary)"><path d="M15 18.5A6.48 6.48 0 0 1 9.24 15H15v-2H8.58c-.05-.33-.08-.66-.08-1s.03-.67.08-1H15V9H9.24A6.49 6.49 0 0 1 15 5.5c1.61 0 3.09.59 4.23 1.57L21 5.3A8.955 8.955 0 0 0 15 3c-3.92 0-7.24 2.51-8.48 6H3v2h3.06a8.262 8.262 0 0 0 0 2H3v2h3.52c1.24 3.49 4.56 6 8.48 6 2.31 0 4.41-.87 6-2.3l-1.78-1.77c-1.13.98-2.6 1.57-4.22 1.57z"/></svg>
                 </div>
                 <h3>Kann kostenlos sein</h3>
                 <p>Wer Bürgergeld, Wohngeld oder Kinderzuschlag bezieht, hat Anspruch auf kostenlose Nachhilfe über das Bildungs- und Teilhabepaket. Wir helfen auch beim Antrag.</p>
@@ -1579,7 +1611,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 SchoolLeo – Antonia Wengert
+            &copy; 2026 SchoolLeo – Antonia Wengert<br>
+            <span style="font-size: 0.8rem; color: #777;">Texte: <a href="https://www.annemarie-andersen.de" target="_blank" rel="noopener">Annemarie Andersen</a> · Umsetzung: <a href="https://www.andersen-webworks.de" target="_blank" rel="noopener">Andersen Webworks</a></span>
         </div>
     </div>
 </footer>
