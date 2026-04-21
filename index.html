@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nachhilfe Plau am See | SchoolLeo – Kostenlos mit BuT, Klasse 1–10</title>
     <meta name="description" content="Nachhilfe in Plau am See und Lübz – für viele Familien komplett kostenlos (BuT). Alle Fächer, Klasse 1 bis 10, Einzel- und Gruppenunterricht. Keine Vertragsbindung, persönliche Lernstandserhebung. SchoolLeo – Antonia Wengert.">
-    <meta name="keywords" content="Nachhilfe Plau am See, SchoolLeo, Nachhilfe Karow, Nachhilfe Goldberg, Nachhilfe Lübz, Lernförderung Mecklenburg, BuT Nachhilfe, Bildungs- und Teilhabepaket, Grundschule Nachhilfe, Regionale Schule Nachhilfe, Schülernachhilfe, Lernstandserhebung, Nachhilfe BuT kostenlos">
+    <meta name="keywords" content="Nachhilfe Plau am See, SchoolLeo, Nachhilfe Karow, Nachhilfe Goldberg, Nachhilfe Lübz, Nachhilfe Parchim, Lernförderung Mecklenburg, BuT Nachhilfe, Bildungs- und Teilhabepaket, Grundschule Nachhilfe, Regionale Schule Nachhilfe, Schülernachhilfe, Lernstandserhebung, Nachhilfe BuT kostenlos, Nachhilfekraft gesucht, Honorarkraft Nachhilfe">
     <meta name="author" content="SchoolLeo – Antonia Wengert">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#8B0000">
@@ -44,7 +44,8 @@
             {"@type": "City", "name": "Plau am See"},
             {"@type": "Place", "name": "Karow"},
             {"@type": "Place", "name": "Goldberg"},
-            {"@type": "Place", "name": "Lübz"}
+            {"@type": "Place", "name": "Lübz"},
+            {"@type": "Place", "name": "Parchim"}
         ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -143,6 +144,28 @@
                 "acceptedAnswer": {"@type": "Answer", "text": "Es gibt einen Vertrag, aber keine festen Laufzeiten. Selbstzahler können mit vier Wochen Frist kündigen. Bei BuT-Förderung kann die Nachhilfe enden, sobald der Leistungsanspruch der Familie wegfällt."}
             }
         ]
+    }
+    </script>
+
+    <!-- Structured Data: JobPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "title": "Nachhilfekraft (Honorarkraft / freie Mitarbeit)",
+        "description": "Für unser Nachhilfeinstitut SchoolLeo suchen wir zuverlässige Nachhilfekräfte als freie Mitarbeiter/innen (Honorarkraft). Der Unterricht findet im Mehrgenerationenhaus statt. Fächer nach eigenen Stärken, Schwerpunkt Mathe und Deutsch. Flexible Stundenzahl.",
+        "datePosted": "2026-04-21",
+        "employmentType": "OTHER",
+        "hiringOrganization": {
+            "@type": "EducationalOrganization",
+            "name": "SchoolLeo – Schülernachhilfe",
+            "sameAs": "https://www.nachhilfe-plau.de"
+        },
+        "jobLocation": [
+            {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Parchim", "addressRegion": "Mecklenburg-Vorpommern", "addressCountry": "DE"}},
+            {"@type": "Place", "address": {"@type": "PostalAddress", "addressLocality": "Lübz", "addressRegion": "Mecklenburg-Vorpommern", "addressCountry": "DE"}}
+        ],
+        "qualifications": "Lehramtsstudium, Studium mit pädagogischem Schwerpunkt oder vergleichbare Qualifikation"
     }
     </script>
 
@@ -665,6 +688,78 @@
             font-weight: 500;
         }
 
+        /* ========== MITMACHEN ========== */
+        .mitmachen-inner {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .mitmachen-intro {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 640px;
+        }
+        .mitmachen-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+        .mitmachen-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.25rem;
+            color: var(--text);
+        }
+        .mitmachen-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        .mitmachen-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+        .mitmachen-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.85rem;
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+        .mitmachen-highlight {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 1.25rem 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        .mitmachen-cta {
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        .mitmachen-standorte {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        .mitmachen-standort {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
         /* ========== FAQ ========== */
         .faq-list {
             max-width: 750px;
@@ -990,6 +1085,7 @@
             <li><a href="#angebot">Angebot</a></li>
             <li><a href="#but">BuT-Förderung</a></li>
             <li><a href="#ueber">Über mich</a></li>
+            <li><a href="#mitmachen">Mitmachen</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
         </ul>
@@ -1345,6 +1441,54 @@
                     <span class="gebiet-tag">und Umgebung</span>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== MITMACHEN ==================== -->
+<section id="mitmachen" style="background: var(--bg-section);">
+    <div class="container mitmachen-inner">
+        <span class="section-label">Wir wachsen</span>
+        <h2>Nachhilfekräfte gesucht</h2>
+        <p class="mitmachen-intro">SchoolLeo wächst – und wir suchen Verstärkung. Du hast Freude daran, mit Kindern und Jugendlichen zu arbeiten? Dann melde dich bei uns.</p>
+
+        <div class="mitmachen-standorte">
+            <span class="mitmachen-standort">Parchim</span>
+            <span class="mitmachen-standort">Lübz</span>
+        </div>
+
+        <div class="mitmachen-card">
+            <h3>Was dich erwartet</h3>
+            <ul class="mitmachen-list">
+                <li>Nachhilfeunterricht in kleinen Gruppen oder einzeln – im Mehrgenerationenhaus vor Ort</li>
+                <li>Du bestimmst selbst, wie viele Stunden pro Woche du unterrichtest</li>
+                <li>Fächer nach deinen Stärken – Schwerpunkt Mathe und Deutsch</li>
+                <li>Grundschule oder Regionale Schule – du entscheidest</li>
+            </ul>
+
+            <h3>Was wir übernehmen</h3>
+            <ul class="mitmachen-list">
+                <li>Bildung & Teilhabe: Anträge, Folgeanträge, Abrechnung mit dem Landkreis</li>
+                <li>Elterngespräche und Koordination</li>
+                <li>Schülersuche und Organisation</li>
+            </ul>
+            <p style="color: var(--text-light); font-size: 0.95rem;">Du unterrichtest – den Rest erledigen wir. Am Monatsende stellst du uns eine Rechnung über deine geleisteten Stunden.</p>
+        </div>
+
+        <div class="mitmachen-card">
+            <h3>Voraussetzung</h3>
+            <ul class="mitmachen-list">
+                <li>Lehramtsstudium, Studium mit pädagogischem Schwerpunkt oder vergleichbare Qualifikation</li>
+            </ul>
+
+            <div class="mitmachen-highlight">
+                <strong>Hinweis:</strong> Es handelt sich um eine Tätigkeit als Honorarkraft / freie Mitarbeit – kein Angestelltenverhältnis.
+            </div>
+        </div>
+
+        <div class="mitmachen-cta">
+            <p style="font-size: 1.05rem; color: var(--text); margin-bottom: 1.25rem;"><strong>Interesse?</strong> Dann melde dich – wir besprechen alles Weitere.</p>
+            <a href="tel:+4915236935769" class="btn btn-primary">0152 369 35 769</a>
         </div>
     </div>
 </section>
