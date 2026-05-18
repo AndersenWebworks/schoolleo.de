@@ -9,6 +9,13 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#8B0000">
     <link rel="canonical" href="https://nachhilfe-plau.de/">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <link rel="apple-touch-icon" href="/img/logo.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="geo.region" content="DE-MV">
+    <meta name="geo.placename" content="Plau am See">
+    <meta name="geo.position" content="53.4626;12.2647">
+    <meta name="ICBM" content="53.4626, 12.2647">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SchoolLeo">
     <meta property="og:title" content="Nachhilfe kostenlos? Ja, wirklich. | SchoolLeo Plau am See">
@@ -30,7 +37,14 @@
         "name": "SchoolLeo – Schülernachhilfe",
         "alternateName": "SchoolLeo",
         "description": "Nachhilfe für Grundschule und Regionale Schule in Plau am See und Umgebung. Einzel- und Gruppenunterricht in allen Fächern (außer Fremdsprachen), Klasse 1 bis 10. BuT-Finanzierung möglich.",
-        "founder": {"@type": "Person", "name": "Antonia Wengert"},
+        "founder": {
+            "@type": "Person",
+            "@id": "https://nachhilfe-plau.de/#antonia-wengert",
+            "name": "Antonia Wengert",
+            "jobTitle": "Nachhilfelehrerin",
+            "worksFor": {"@id": "https://nachhilfe-plau.de/#schoolleo"},
+            "url": "https://nachhilfe-plau.de/#ueber"
+        },
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Zum Wasserturm 14",
@@ -45,7 +59,24 @@
         "url": "https://nachhilfe-plau.de/",
         "image": "https://nachhilfe-plau.de/img/antonia.jpg",
         "logo": "https://nachhilfe-plau.de/img/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+4915236935769",
+            "email": "antonia.wengert90@gmail.com",
+            "contactType": "customer service",
+            "areaServed": "DE-MV",
+            "availableLanguage": "de"
+        },
         "priceRange": "Kostenlos (BuT) oder 25 EUR/Einheit (Selbstzahler)",
+        "currenciesAccepted": "EUR",
+        "knowsAbout": [
+            "Nachhilfe",
+            "Lernförderung",
+            "Bildungs- und Teilhabepaket",
+            "Grundschule",
+            "Regionale Schule",
+            "LRS-Förderung"
+        ],
         "areaServed": [
             {"@type": "City", "name": "Plau am See"},
             {"@type": "Place", "name": "Karow"},
@@ -83,7 +114,7 @@
                 }
             ]
         },
-        "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "description": "Flexible Zeiten nach Vereinbarung"},
+        "openingHours": "Flexible Zeiten nach Vereinbarung",
         "paymentAccepted": "Selbstzahler, Bildungs- und Teilhabepaket (BuT)"
     }
     </script>
@@ -161,6 +192,7 @@
         "title": "Nachhilfekraft (Honorarkraft / freie Mitarbeit)",
         "description": "Für unser Nachhilfeinstitut SchoolLeo suchen wir zuverlässige Nachhilfekräfte als freie Mitarbeiter/innen (Honorarkraft). Der Unterricht findet im Mehrgenerationenhaus statt. Fächer nach eigenen Stärken, Schwerpunkt Mathe und Deutsch. Flexible Stundenzahl.",
         "datePosted": "2026-04-21",
+        "validThrough": "2026-12-31T23:59:00+01:00",
         "employmentType": "OTHER",
         "hiringOrganization": {
             "@type": "EducationalOrganization",
@@ -1096,11 +1128,13 @@
     </div>
 </nav>
 
+<main id="main-content">
+
 <!-- ==================== HERO ==================== -->
 <section class="hero" id="hero">
     <div class="container hero-inner">
         <div class="hero-logo-wrap">
-            <img src="img/logo.png" alt="SchoolLeo Löwe" class="hero-logo">
+            <img src="img/logo.png" alt="SchoolLeo Löwe" class="hero-logo" width="500" height="500" fetchpriority="high">
         </div>
         <div class="hero-content">
         <h1>Nachhilfe <em>kostenlos</em>?<br>Ja, wirklich.</h1>
@@ -1802,6 +1836,8 @@
     </div>
 </section>
 
+</main>
+
 <!-- ==================== FOOTER ==================== -->
 <footer>
     <div class="container">
@@ -1852,10 +1888,10 @@
 </div>
 
 <!-- ==================== IMPRESSUM MODAL ==================== -->
-<div class="legal-modal" id="impressumModal" role="dialog" aria-label="Impressum">
+<div class="legal-modal" id="impressumModal" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
     <div class="legal-modal-content">
         <button class="legal-close" onclick="closeLegal('impressumModal')" aria-label="Schließen">&times;</button>
-        <h2>Impressum</h2>
+        <h2 id="impressum-title">Impressum</h2>
 
         <h3>Angaben gemäß § 5 TMG</h3>
         <p>
@@ -1903,10 +1939,10 @@
 </div>
 
 <!-- ==================== DATENSCHUTZ MODAL ==================== -->
-<div class="legal-modal" id="datenschutzModal" role="dialog" aria-label="Datenschutzerklärung">
+<div class="legal-modal" id="datenschutzModal" role="dialog" aria-modal="true" aria-labelledby="datenschutz-title">
     <div class="legal-modal-content">
         <button class="legal-close" onclick="closeLegal('datenschutzModal')" aria-label="Schließen">&times;</button>
-        <h2>Datenschutzerklärung</h2>
+        <h2 id="datenschutz-title">Datenschutzerklärung</h2>
 
         <h3>1. Verantwortlicher</h3>
         <p>
@@ -1977,6 +2013,8 @@
         </p>
     </div>
 </div>
+
+<button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">&#8593;</button>
 
 <!-- ==================== JAVASCRIPT ==================== -->
 <script>
@@ -2137,8 +2175,6 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
-
-<button class="back-to-top" id="backToTop" aria-label="Nach oben scrollen">&#8593;</button>
 
 </body>
 </html>
