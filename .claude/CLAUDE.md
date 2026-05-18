@@ -13,7 +13,7 @@ Kein WordPress, kein CMS. Reines HTML/CSS mit Schema.org/JSON-LD.
 
 ## Kontakt
 
-- Telefon: 0162 369 35 769
+- Telefon: 0152 369 35 769
 - E-Mail: antonia.wengert90@gmail.com
 - Adresse: Zum Wasserturm 14, 19395 Plau am See (OT Karow)
 
