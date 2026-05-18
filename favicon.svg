@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SchoolLeo Favicon">
-  <circle cx="256" cy="256" r="248" fill="#fff"/>
-  <g fill="none" stroke="#050505" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M64 160 256 88 448 160 256 232Z" stroke-width="28"/>
-    <path d="M128 188v92c0 28 256 28 256 0v-92" stroke-width="28"/>
-    <path d="M302 164c68-10 102 16 122 76" stroke-width="24"/>
-    <path d="M424 240v70" stroke-width="24"/>
-    <path d="M424 310l-28 62h56Z" stroke-width="20" fill="#c40012"/>
-  </g>
-  <text x="256" y="442" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="142" fill="#c40012">SL</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SchoolLeo Schulhut">
+  <rect width="64" height="64" rx="10" fill="#ffffff"/>
+  <path d="M4 24 32 8.5 60 24 32 39.5 4 24Z" fill="#202020"/>
+  <path d="M13 33.5c5.7 5.8 12.1 8.7 19 8.7s13.3-2.9 19-8.7v10.2c-5.5 5.2-11.8 7.8-19 7.8s-13.5-2.6-19-7.8V33.5Z" fill="#2f2f2f"/>
+  <path d="M55 27v16" stroke="#c40012" stroke-width="4.8" stroke-linecap="round"/>
+  <circle cx="55" cy="48" r="5.8" fill="#c40012"/>
+  <circle cx="32" cy="24" r="3.4" fill="#c40012"/>
 </svg>
