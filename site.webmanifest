@@ -1,24 +1,24 @@
 {
-  "name": "SchoolLeo - Schuelernachhilfe",
+  "name": "SchoolLeo Nachhilfe Plau am See",
   "short_name": "SchoolLeo",
   "description": "Nachhilfe in Plau am See und Luebz fuer Klasse 1 bis 10.",
   "start_url": "/",
   "scope": "/",
-  "display": "minimal-ui",
+  "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#8B0000",
+  "theme_color": "#c40012",
   "icons": [
     {
-      "src": "/img/logo.png",
-      "sizes": "500x500",
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/img/logo.png",
-      "sizes": "500x500",
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     }
   ]
 }

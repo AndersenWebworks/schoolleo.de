@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SchoolLeo Favicon">
+  <circle cx="256" cy="256" r="248" fill="#fff"/>
+  <g fill="none" stroke="#050505" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M64 160 256 88 448 160 256 232Z" stroke-width="28"/>
+    <path d="M128 188v92c0 28 256 28 256 0v-92" stroke-width="28"/>
+    <path d="M302 164c68-10 102 16 122 76" stroke-width="24"/>
+    <path d="M424 240v70" stroke-width="24"/>
+    <path d="M424 310l-28 62h56Z" stroke-width="20" fill="#c40012"/>
+  </g>
+  <text x="256" y="442" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="142" fill="#c40012">SL</text>
+</svg>
