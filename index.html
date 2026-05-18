@@ -813,9 +813,7 @@
             grid-template-columns: 1fr;
             gap: 2.5rem;
         }
-        /* TEMPORÄR AUSGEBLENDET – display: none entfernen zum Reaktivieren */
         .kontakt-form {
-            display: none;
             background: var(--white);
             border-radius: var(--radius-lg);
             padding: 2rem;
@@ -2084,7 +2082,7 @@
             encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 
         // Show success message
-        document.getElementById('anfrageForm').querySelector('form').style.display = 'none';
+        document.getElementById('anfrageForm').style.display = 'none';
         document.getElementById('formSuccess').style.display = 'block';
     });
 
