@@ -2067,27 +2067,24 @@
         body += 'ich habe das Kontaktformular auf nachhilfe-plau.de ausgefüllt und freue mich über eine kurze Rückmeldung.\n\n';
 
         if (data.nachricht) {
-            body += 'NACHRICHT\n';
-            body += '---------\n';
+            body += 'Meine Nachricht:\n';
             body += data.nachricht + '\n\n';
         }
 
-        body += 'KONTAKT\n';
-        body += '-------\n';
-        body += '• Name: ' + data.elternname + '\n';
-        body += '• Telefon: ' + data.telefon + '\n';
-        if (data.email) body += '• E-Mail: ' + data.email + '\n';
+        body += 'Meine Kontaktdaten:\n';
+        body += 'Name: ' + data.elternname + '\n';
+        body += 'Telefon: ' + data.telefon + '\n';
+        if (data.email) body += 'E-Mail: ' + data.email + '\n';
 
-        body += '\nKIND UND UNTERRICHT\n';
-        body += '-------------------\n';
-        if (data.schuelername) body += '• Name des Kindes: ' + data.schuelername + '\n';
-        if (data.schulart) body += '• Schulart: ' + data.schulart + '\n';
-        if (data.klasse) body += '• Klassenstufe: Klasse ' + data.klasse + '\n';
-        if (data.fach) body += '• Fach: ' + data.fach + '\n';
-        if (data.unterrichtsform) body += '• Unterrichtsform: ' + data.unterrichtsform + '\n';
-        body += '• BuT-Finanzierung: ' + data.but + '\n';
+        body += '\nAngaben zum Kind:\n';
+        if (data.schuelername) body += 'Name des Kindes: ' + data.schuelername + '\n';
+        if (data.schulart) body += 'Schulart: ' + data.schulart + '\n';
+        if (data.klasse) body += 'Klassenstufe: Klasse ' + data.klasse + '\n';
+        if (data.fach) body += 'Fach: ' + data.fach + '\n';
+        if (data.unterrichtsform) body += 'Gewünschte Unterrichtsform: ' + data.unterrichtsform + '\n';
+        body += 'Interesse an BuT-Finanzierung: ' + data.but + '\n';
 
-        body += '\n--\nDiese E-Mail wurde über das Kontaktformular auf nachhilfe-plau.de vorbereitet.';
+        body += '\nDiese E-Mail wurde über das Kontaktformular auf nachhilfe-plau.de vorbereitet.\n';
 
         window.location.href = 'mailto:antonia.wengert90@gmail.com?subject=' +
             encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
