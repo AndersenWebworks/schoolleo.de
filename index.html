@@ -2064,19 +2064,23 @@
         const subject = 'Nachhilfe-Anfrage' + (data.schuelername ? ' für ' + data.schuelername : '');
 
         let body = 'Guten Tag,\n\n';
-        body += 'ich möchte mein Kind zur Nachhilfe anmelden.\n\n';
-        body += '--- Angaben ---\n';
-        body += 'Name (Eltern): ' + data.elternname + '\n';
-        if (data.schuelername) body += 'Name (Kind): ' + data.schuelername + '\n';
-        body += 'Telefon: ' + data.telefon + '\n';
-        if (data.email) body += 'E-Mail: ' + data.email + '\n';
-        if (data.schulart) body += 'Schulart: ' + data.schulart + '\n';
-        if (data.klasse) body += 'Klassenstufe: ' + data.klasse + '\n';
-        if (data.fach) body += 'Fach: ' + data.fach + '\n';
-        if (data.unterrichtsform) body += 'Unterrichtsform: ' + data.unterrichtsform + '\n';
-        body += 'BuT-Interesse: ' + data.but + '\n';
-        if (data.nachricht) body += '\n--- Nachricht ---\n' + data.nachricht + '\n';
-        body += '\n---\nGesendet über nachhilfe-plau.de';
+        body += 'ich interessiere mich für Nachhilfe bei SchoolLeo und bitte um Rückmeldung.\n\n';
+
+        body += 'Kontakt\n';
+        body += '- Name: ' + data.elternname + '\n';
+        body += '- Telefon: ' + data.telefon + '\n';
+        if (data.email) body += '- E-Mail: ' + data.email + '\n';
+
+        body += '\nKind und Unterricht\n';
+        if (data.schuelername) body += '- Name des Kindes: ' + data.schuelername + '\n';
+        if (data.schulart) body += '- Schulart: ' + data.schulart + '\n';
+        if (data.klasse) body += '- Klassenstufe: Klasse ' + data.klasse + '\n';
+        if (data.fach) body += '- Fach: ' + data.fach + '\n';
+        if (data.unterrichtsform) body += '- Unterrichtsform: ' + data.unterrichtsform + '\n';
+        body += '- BuT-Finanzierung: ' + data.but + '\n';
+
+        if (data.nachricht) body += '\nNachricht\n' + data.nachricht + '\n';
+        body += '\n--\nDiese E-Mail wurde über das Kontaktformular auf nachhilfe-plau.de vorbereitet.';
 
         window.location.href = 'mailto:antonia.wengert90@gmail.com?subject=' +
             encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
