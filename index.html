@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nachhilfe Plau am See & Lübz | SchoolLeo</title>
-    <meta name="description" content="Nachhilfe in Plau am See und Lübz – komplett kostenlos mit BuT (Bürgergeld, Wohngeld, Kinderzuschlag). Selbstzahler: 25 EUR. Klasse 1–10, keine Vertragsbindung. SchoolLeo – Antonia Wengert.">
+    <meta name="description" content="Nachhilfe in Plau am See und Lübz für Klasse 1-10: kostenlos mit BuT oder 25 EUR für Selbstzahler. Einzel- und Gruppenunterricht bei SchoolLeo.">
     <meta name="author" content="SchoolLeo – Antonia Wengert">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#c40012">
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SchoolLeo">
     <meta property="og:title" content="Nachhilfe Plau am See & Lübz | SchoolLeo">
-    <meta property="og:description" content="Nachhilfe in Plau am See und Lübz – komplett kostenlos mit BuT (Bürgergeld, Wohngeld, Kinderzuschlag). Selbstzahler: 25 EUR. Klasse 1–10, keine Vertragsbindung.">
+    <meta property="og:description" content="Nachhilfe in Plau am See und Lübz für Klasse 1-10: kostenlos mit BuT oder 25 EUR für Selbstzahler. Einzel- und Gruppenunterricht bei SchoolLeo.">
     <meta property="og:locale" content="de_DE">
     <meta property="og:url" content="https://nachhilfe-plau.de/">
     <meta property="og:image" content="https://nachhilfe-plau.de/img/og-schoolleo.png">
@@ -31,7 +31,7 @@
     <meta property="og:image:alt" content="SchoolLeo – Nachhilfe in Plau am See und Lübz">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nachhilfe Plau am See & Lübz | SchoolLeo">
-    <meta name="twitter:description" content="Nachhilfe in Plau am See und Lübz – kostenlos mit BuT oder 25 EUR pro Einheit für Selbstzahler. Klasse 1–10.">
+    <meta name="twitter:description" content="Nachhilfe in Plau am See und Lübz für Klasse 1-10: kostenlos mit BuT oder 25 EUR für Selbstzahler.">
     <meta name="twitter:image" content="https://nachhilfe-plau.de/img/og-schoolleo.png">
     <meta name="twitter:image:alt" content="SchoolLeo – Nachhilfe in Plau am See und Lübz">
 
@@ -48,7 +48,7 @@
             "Schülernachhilfe Plau am See",
             "Nachhilfe Lübz"
         ],
-        "description": "Nachhilfe für Grundschule und Regionale Schule in Plau am See und Umgebung. Einzel- und Gruppenunterricht in allen Fächern (außer Fremdsprachen), Klasse 1 bis 10. BuT-Finanzierung möglich.",
+        "description": "Nachhilfe in Plau am See und Lübz für Schülerinnen und Schüler der Klassen 1 bis 10. Einzel- und Gruppenunterricht in Kernfächern, BuT-Finanzierung möglich.",
         "founder": {
             "@type": "Person",
             "@id": "https://nachhilfe-plau.de/#antonia-wengert",
@@ -103,6 +103,28 @@
             {"@type": "Place", "name": "Lübz"},
             {"@type": "Place", "name": "Parchim"}
         ],
+        "location": [
+            {
+                "@type": "Place",
+                "name": "Kinder- und Jugendzentrum Plau am See",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Plau am See",
+                    "addressRegion": "Mecklenburg-Vorpommern",
+                    "addressCountry": "DE"
+                }
+            },
+            {
+                "@type": "Place",
+                "name": "Mehrgenerationenhaus Lübz",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Lübz",
+                    "addressRegion": "Mecklenburg-Vorpommern",
+                    "addressCountry": "DE"
+                }
+            }
+        ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Nachhilfe-Angebote",
@@ -146,6 +168,21 @@
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Gibt es Nachhilfe in Plau am See für Klasse 1 bis 10?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Ja. SchoolLeo bietet Nachhilfe in Plau am See für Schülerinnen und Schüler von Klasse 1 bis Klasse 10. Der Unterricht findet vor Ort im Kinder- und Jugendzentrum (KJZ) statt."}
+            },
+            {
+                "@type": "Question",
+                "name": "Gibt es Nachhilfe in Lübz?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Ja. SchoolLeo bietet auch Nachhilfe in Lübz an. Der Unterricht findet im Mehrgenerationenhaus (MGH) statt und richtet sich an Familien aus Lübz und Umgebung."}
+            },
+            {
+                "@type": "Question",
+                "name": "Bietet SchoolLeo Mathe- und Deutsch-Nachhilfe in Plau am See an?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Ja. Mathematik und Deutsch gehören zu den wichtigsten Fächern bei SchoolLeo. Zusätzlich sind weitere Kernfächer der Grundschule und Regionalen Schule möglich."}
+            },
             {
                 "@type": "Question",
                 "name": "Welche Fächer bietet SchoolLeo in Plau am See an?",
@@ -516,6 +553,43 @@
         .vorteil-card h3 { margin-bottom: 0.5rem; }
         .vorteil-card p { color: var(--text-light); font-size: 0.95rem; }
 
+        /* ========== FACTS ========== */
+        .facts-section {
+            background: var(--bg-warm);
+            padding: 3rem 0;
+        }
+        .facts-intro {
+            max-width: 820px;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 1.75rem;
+        }
+        .facts-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .fact-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .fact-label {
+            display: block;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-lighter);
+            margin-bottom: 0.35rem;
+        }
+        .fact-value {
+            color: var(--text);
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
         /* ========== ANGEBOT ========== */
         .angebot-grid {
             display: grid;
@@ -560,6 +634,26 @@
             border-radius: var(--radius);
             font-size: 0.95rem;
             color: var(--text-light);
+        }
+        .standort-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .standort-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .standort-card h3 { margin-bottom: 0.75rem; }
+        .standort-card p { color: var(--text-light); font-size: 0.96rem; margin-bottom: 0.75rem; }
+        .standort-card p:last-child { margin-bottom: 0; }
+        .standort-note {
+            margin-top: 1.5rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
         }
 
         /* ========== ABLAUF ========== */
@@ -652,6 +746,21 @@
             font-size: 0.95rem;
             color: var(--text);
         }
+        .but-local {
+            margin: 2rem 0;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .but-local h3 { margin-bottom: 0.75rem; }
+        .but-local p {
+            color: var(--text-light);
+            font-size: 0.96rem;
+            margin-bottom: 0.75rem;
+        }
+        .but-local p:last-child { margin-bottom: 0; }
 
         /* ========== TESTIMONIALS ========== */
         .testimonial-grid {
@@ -1050,7 +1159,9 @@
         /* ========== RESPONSIVE ========== */
         @media (min-width: 640px) {
             .vorteile-grid { grid-template-columns: repeat(2, 1fr); }
+            .facts-grid { grid-template-columns: repeat(2, 1fr); }
             .angebot-grid { grid-template-columns: repeat(2, 1fr); }
+            .standort-grid { grid-template-columns: repeat(2, 1fr); }
             .but-grid { grid-template-columns: repeat(2, 1fr); }
             .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
             .form-row { grid-template-columns: repeat(2, 1fr); }
@@ -1068,6 +1179,7 @@
 
         @media (min-width: 900px) {
             .vorteile-grid { grid-template-columns: repeat(3, 1fr); }
+            .facts-grid { grid-template-columns: repeat(4, 1fr); }
             .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
             .nav-toggle { display: none; }
             .mobile-cta { display: none; }
@@ -1078,13 +1190,37 @@
                 flex-direction: column;
                 text-align: center;
             }
+            .hero-content {
+                width: 100%;
+                min-width: 0;
+            }
+            .hero h1 {
+                font-size: clamp(1.85rem, 7vw, 2.15rem);
+                overflow-wrap: anywhere;
+            }
             .hero-logo-wrap {
                 width: 180px;
                 height: 180px;
             }
-            .hero-sub { margin-left: auto; margin-right: auto; }
+            .hero-sub {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.05rem;
+            }
             .hero-ctas { justify-content: center; }
-            .hero-trust { justify-content: center; }
+            .hero-trust {
+                justify-content: center;
+                gap: 0.9rem 1.25rem;
+            }
+            .hero-trust span {
+                max-width: 100%;
+            }
+            .mobile-cta .btn {
+                min-width: 0;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
         }
 
         @media (max-width: 899px) {
@@ -1124,6 +1260,7 @@
         </button>
         <ul class="nav-links" id="navLinks">
             <li><a href="#angebot">Angebot</a></li>
+            <li><a href="#standorte">Standorte</a></li>
             <li><a href="#but">BuT-Förderung</a></li>
             <li><a href="#ueber">Über mich</a></li>
             <li><a href="#mitmachen">Mitmachen</a></li>
@@ -1142,9 +1279,9 @@
             <img src="img/logo.png" alt="SchoolLeo Löwe" class="hero-logo" width="500" height="500" fetchpriority="high">
         </div>
         <div class="hero-content">
-        <h1>Nachhilfe <em>kostenlos</em>?<br>Ja, wirklich.</h1>
+        <h1>Nachhilfe in <em>Plau am See</em> und Lübz</h1>
         <p class="hero-sub">
-            Plau am See und Lübz, Klasse 1–10. Wer Bürgergeld, Wohngeld oder Kinderzuschlag bezieht: null Euro. Selbstzahler: 25 EUR / Einheit. Keine Vertragsbindung, keine Mindestlaufzeit.
+            Für Schülerinnen und Schüler von Klasse 1–10. Kostenlos mit BuT-Förderung oder 25 EUR pro Einheit für Selbstzahler. Einzelunterricht und kleine Gruppen vor Ort.
         </p>
         <div class="hero-ctas">
             <a href="#kontakt" class="btn btn-primary">
@@ -1182,6 +1319,35 @@
             <span style="color: var(--star);">★★★★★</span>
             <span>Familien aus Plau, Lübz, Goldberg und Karow vertrauen SchoolLeo</span>
         </p>
+    </div>
+</section>
+
+<!-- ==================== FAKTEN ==================== -->
+<section class="facts-section" aria-labelledby="facts-title">
+    <div class="container">
+        <span class="section-label">Kurzüberblick</span>
+        <h2 id="facts-title">SchoolLeo auf einen Blick</h2>
+        <p class="facts-intro">
+            SchoolLeo bietet Nachhilfe in Plau am See und Lübz für Schülerinnen und Schüler der Klassen 1 bis 10. Der Unterricht findet vor Ort im Kinder- und Jugendzentrum Plau am See und im Mehrgenerationenhaus Lübz statt. Familien mit BuT-Anspruch zahlen nichts; Selbstzahler zahlen 25 EUR pro Unterrichtseinheit.
+        </p>
+        <div class="facts-grid">
+            <div class="fact-item">
+                <span class="fact-label">Orte</span>
+                <span class="fact-value">Plau am See und Lübz</span>
+            </div>
+            <div class="fact-item">
+                <span class="fact-label">Klassen</span>
+                <span class="fact-value">Klasse 1 bis 10</span>
+            </div>
+            <div class="fact-item">
+                <span class="fact-label">Fächer</span>
+                <span class="fact-value">Mathe, Deutsch und weitere Kernfächer</span>
+            </div>
+            <div class="fact-item">
+                <span class="fact-label">Kosten</span>
+                <span class="fact-value">0 EUR mit BuT oder 25 EUR pro Einheit</span>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -1349,6 +1515,28 @@
     </div>
 </section>
 
+<!-- ==================== STANDORTE ==================== -->
+<section id="standorte">
+    <div class="container">
+        <span class="section-label">Vor Ort</span>
+        <h2>Nachhilfe vor Ort in Plau am See und Lübz</h2>
+        <p class="section-desc">SchoolLeo arbeitet an zwei festen Unterrichtsorten in der Region. So bleibt die Nachhilfe persönlich, verlässlich und nah am Alltag der Kinder.</p>
+        <div class="standort-grid">
+            <div class="standort-card fade-in">
+                <h3>Plau am See</h3>
+                <p>In Plau am See findet die Nachhilfe im Kinder- und Jugendzentrum (KJZ) statt. Der Standort ist der Schwerpunkt von SchoolLeo und gut passend für Familien aus Plau am See, Karow, Goldberg und der näheren Umgebung.</p>
+                <p>Antonia Wengert betreut hier Kinder und Jugendliche von der Grundschule bis zur Regionalen Schule.</p>
+            </div>
+            <div class="standort-card fade-in">
+                <h3>Lübz</h3>
+                <p>In Lübz findet der Unterricht im Mehrgenerationenhaus (MGH) statt. Der Standort ist für Familien aus Lübz und Umgebung gedacht, wenn Plau am See im Alltag zu weit ist.</p>
+                <p>Der Unterricht folgt denselben Grundsätzen: erst Lernstand klären, dann gezielt fördern – einzeln oder in kleinen Gruppen.</p>
+            </div>
+        </div>
+        <p class="standort-note">Hausbesuche bieten wir nicht an. Der Schwerpunkt liegt auf persönlicher Nachhilfe vor Ort in Plau am See und Lübz.</p>
+    </div>
+</section>
+
 <!-- ==================== ABLAUF ==================== -->
 <section id="ablauf">
     <div class="container">
@@ -1408,10 +1596,16 @@
 <section id="but" class="but-section">
     <div class="container">
         <span class="section-label">BuT-Förderung</span>
-        <h2>Nachhilfe kann kostenlos sein</h2>
+        <h2>BuT-Lernförderung im Landkreis Ludwigslust-Parchim</h2>
         <p class="but-intro">
-            Viele Familien wissen gar nicht, dass ihnen das Bildungs- und Teilhabepaket (BuT) zusteht. Wer bestimmte Sozialleistungen bezieht, bekommt die Nachhilfe komplett vom Staat bezahlt.
+            Viele Familien wissen gar nicht, dass ihnen das Bildungs- und Teilhabepaket (BuT) zusteht. Wenn die Schule den Bedarf bestätigt, kann Nachhilfe in Plau am See und Lübz komplett über BuT bezahlt werden.
         </p>
+        <div class="but-local fade-in">
+            <h3>Was bedeutet das für Familien aus Plau am See und Lübz?</h3>
+            <p>Familien im Landkreis Ludwigslust-Parchim können Lernförderung beantragen, wenn sie zum Beispiel Bürgergeld, Sozialhilfe, Wohngeld, Kinderzuschlag oder Leistungen nach dem Asylbewerberleistungsgesetz erhalten.</p>
+            <p>Wichtig ist die Reihenfolge: Erst bestätigt die Schule den Förderbedarf, dann melden Sie sich bei SchoolLeo, damit unsere Unterlagen direkt mit eingereicht werden können.</p>
+            <p>Offizielle Informationen zur zuständigen Stelle finden Sie beim <a href="https://www.kreis-lup.de/Wer-macht-was-/Fachdienst-Soziales/?La=1" target="_blank" rel="noopener">Landkreis Ludwigslust-Parchim, Fachdienst Soziales</a>.</p>
+        </div>
         <div class="but-grid">
             <div class="but-who fade-in">
                 <h3>Wer hat Anspruch?</h3>
@@ -1555,6 +1749,33 @@
         <span class="section-label">Häufige Fragen</span>
         <h2>Gut zu wissen</h2>
         <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Gibt es Nachhilfe in Plau am See für Klasse 1 bis 10?
+                    <svg class="faq-arrow" viewBox="0 0 24 24" fill="var(--text)"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Ja. SchoolLeo bietet Nachhilfe in Plau am See für Schülerinnen und Schüler von Klasse 1 bis Klasse 10. Der Unterricht findet vor Ort im Kinder- und Jugendzentrum (KJZ) statt.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Gibt es Nachhilfe in Lübz?
+                    <svg class="faq-arrow" viewBox="0 0 24 24" fill="var(--text)"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Ja. SchoolLeo bietet auch Nachhilfe in Lübz an. Der Unterricht findet im Mehrgenerationenhaus (MGH) statt und richtet sich an Familien aus Lübz und Umgebung.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Bietet SchoolLeo Mathe- und Deutsch-Nachhilfe in Plau am See an?
+                    <svg class="faq-arrow" viewBox="0 0 24 24" fill="var(--text)"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Ja. Mathematik und Deutsch gehören zu den wichtigsten Fächern bei SchoolLeo. Zusätzlich sind weitere Kernfächer der Grundschule und Regionalen Schule möglich.</p>
+                </div>
+            </div>
             <div class="faq-item">
                 <button class="faq-question" aria-expanded="false">
                     Welche Fächer bietet SchoolLeo an?
