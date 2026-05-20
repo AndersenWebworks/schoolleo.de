@@ -730,6 +730,81 @@
             font-size: 0.95rem;
             color: var(--text-light);
         }
+        .angebot-sub-label {
+            display: flex;
+            width: max-content;
+            margin-top: 3.25rem;
+            margin-bottom: 1.5rem;
+        }
+        .angebot-glance-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .angebot-glance {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 1.8rem 1.35rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .angebot-glance-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 1rem;
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        .angebot-glance-icon svg,
+        .angebot-extra-icon svg {
+            width: 1.35rem;
+            height: 1.35rem;
+            stroke: currentColor;
+        }
+        .angebot-glance h3 {
+            font-size: 1.08rem;
+            margin-bottom: 0.35rem;
+        }
+        .angebot-glance p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .angebot-extra-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .angebot-extra-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: clamp(1.75rem, 4vw, 2.3rem);
+            box-shadow: var(--shadow-sm);
+        }
+        .angebot-extra-icon {
+            width: 3.35rem;
+            height: 3.35rem;
+            border-radius: 0.75rem;
+            display: grid;
+            place-items: center;
+            margin-bottom: 1.6rem;
+            background: var(--primary);
+            color: var(--white);
+        }
+        .angebot-extra-card h3 {
+            font-size: clamp(1.3rem, 2vw, 1.55rem);
+            margin-bottom: 0.65rem;
+        }
+        .angebot-extra-card p {
+            color: var(--text-light);
+            font-size: 1.02rem;
+            margin: 0;
+        }
         .standort-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -1258,6 +1333,8 @@
             .vorteile-grid { grid-template-columns: repeat(2, 1fr); }
             .facts-grid { grid-template-columns: repeat(2, 1fr); }
             .angebot-grid { grid-template-columns: repeat(2, 1fr); }
+            .angebot-glance-grid { grid-template-columns: repeat(2, 1fr); }
+            .angebot-extra-grid { grid-template-columns: repeat(2, 1fr); }
             .standort-grid { grid-template-columns: repeat(2, 1fr); }
             .but-grid { grid-template-columns: repeat(2, 1fr); }
             .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1276,6 +1353,7 @@
         @media (min-width: 900px) {
             .vorteile-grid { grid-template-columns: repeat(3, 1fr); }
             .facts-grid { grid-template-columns: repeat(4, 1fr); }
+            .angebot-glance-grid { grid-template-columns: repeat(4, 1fr); }
             .testimonial-grid { grid-template-columns: repeat(3, 1fr); }
             .nav-toggle { display: none; }
             .mobile-cta { display: none; }
@@ -1591,40 +1669,54 @@
         </div>
 
         <!-- Auf einen Blick: Details -->
-        <h3 style="margin-top: 2.5rem; margin-bottom: 1.25rem; font-size: 1.3rem;">Auf einen Blick</h3>
-        <div class="angebot-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
-            <div class="angebot-block fade-in" style="padding: 1.5rem; text-align: center;">
-                <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">⏱</div>
-                <h3 style="font-size: 1.05rem;">Unterrichtsdauer</h3>
-                <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">45 Minuten pro Einheit, auf Wunsch auch Doppelstunden (90 Min.)</p>
+        <span id="angebot-blick" class="section-label angebot-sub-label">Auf einen Blick</span>
+        <div class="angebot-glance-grid">
+            <div class="angebot-glance fade-in">
+                <div class="angebot-glance-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+                </div>
+                <h3>Unterrichtsdauer</h3>
+                <p>45 Min · auf Wunsch 90 Min</p>
             </div>
-            <div class="angebot-block fade-in" style="padding: 1.5rem; text-align: center;">
-                <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">👥</div>
-                <h3 style="font-size: 1.05rem;">Gruppengröße</h3>
-                <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">Einzelunterricht, 2er- oder 3er-Gruppen – je nachdem, was zum Kind passt</p>
+            <div class="angebot-glance fade-in">
+                <div class="angebot-glance-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"></path><circle cx="9.5" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <h3>Gruppengröße</h3>
+                <p>1, 2 oder 3 Schüler</p>
             </div>
-            <div class="angebot-block fade-in" style="padding: 1.5rem; text-align: center;">
-                <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">📍</div>
-                <h3 style="font-size: 1.05rem;">Unterrichtsorte</h3>
-                <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">Kinder- und Jugendzentrum (KJZ) in Plau am See und Mehrgenerationenhaus (MGH) in Lübz</p>
+            <div class="angebot-glance fade-in">
+                <div class="angebot-glance-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <h3>Standorte</h3>
+                <p>KJZ Plau · MGH Lübz</p>
             </div>
-            <div class="angebot-block fade-in" style="padding: 1.5rem; text-align: center;">
-                <div style="font-size: 1.75rem; margin-bottom: 0.5rem;">🎯</div>
-                <h3 style="font-size: 1.05rem;">Lernstandserhebung</h3>
-                <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.95rem;">Die erste Einheit dient der Lernstandserhebung – damit wir wissen, wo Ihr Kind steht</p>
+            <div class="angebot-glance fade-in">
+                <div class="angebot-glance-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                </div>
+                <h3>Erste Stunde</h3>
+                <p>Lernstandserhebung &amp; Plan</p>
             </div>
         </div>
 
         <!-- Zusatzangebote -->
-        <h3 style="margin-top: 2.5rem; margin-bottom: 1.25rem; font-size: 1.3rem;">Zusätzlich</h3>
-        <div class="angebot-grid">
-            <div class="angebot-block fade-in">
+        <span id="angebot-zusaetzlich" class="section-label angebot-sub-label">Zusätzlich</span>
+        <div class="angebot-extra-grid">
+            <div class="angebot-extra-card fade-in">
+                <div class="angebot-extra-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+                </div>
                 <h3>Ferien-Nachhilfe</h3>
-                <p style="color: var(--text-light);">SchoolLeo bietet in allen Schulferien Nachhilfe an – besonders intensiv in den Sommerferien. Eine gute Gelegenheit, Lücken aufzuholen oder sich aufs neue Schuljahr vorzubereiten.</p>
+                <p>In allen Schulferien – besonders im Sommer für Lücken-Schluss vor dem neuen Schuljahr.</p>
             </div>
-            <div class="angebot-block fade-in">
+            <div class="angebot-extra-card fade-in">
+                <div class="angebot-extra-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"></path></svg>
+                </div>
                 <h3>LRS-Förderung</h3>
-                <p style="color: var(--text-light);">Antonia hat Erfahrung mit Kindern, die unter Lese-Rechtschreib-Schwäche leiden, und arbeitet mit speziellen LRS-Materialien. Keine zertifizierte LRS-Therapie, aber gezielte Unterstützung beim Lesen und Schreiben.</p>
+                <p>Erfahrung mit Lese-Rechtschreib-Schwäche und gezielten Materialien. Keine zertifizierte Therapie, aber spürbare Unterstützung.</p>
             </div>
         </div>
     </div>
