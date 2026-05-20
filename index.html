@@ -244,39 +244,42 @@
 
     <style>
         :root {
-            --primary: #8B0000;
-            --primary-hover: #6E0000;
-            --primary-dark: #4A0000;
-            --primary-light: #FDF0F0;
-            --bg-warm: #FAF8F5;
-            --bg-section: #F4F2EF;
-            --text: #2D2D2D;
-            --text-light: #5A5A5A;
-            --text-lighter: #666;
-            --border: #E5E0DA;
+            --primary: #9B1F26;
+            --primary-hover: #7E1820;
+            --primary-dark: #5E1016;
+            --primary-light: #FBEDEC;
+            --accent-soft: #F3DADB;
+            --bg-warm: #FBF7F5;
+            --bg-section: #F6F1EE;
+            --text: #15110F;
+            --text-light: #3A322E;
+            --text-lighter: #6B6058;
+            --border: #E6E0DC;
             --white: #FFFFFF;
             --green: #2e7d32;
             --whatsapp: #0B7A3B;
             --star: #E8A838;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
-            --shadow-md: 0 4px 15px rgba(0,0,0,0.08);
-            --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
-            --radius: 10px;
-            --radius-lg: 16px;
+            --shadow-sm: 0 1px 0 rgba(21,17,15,.04), 0 1px 2px rgba(21,17,15,.04);
+            --shadow-md: 0 6px 24px -8px rgba(21,17,15,.10);
+            --shadow-lg: 0 14px 40px -14px rgba(21,17,15,.18);
+            --radius: 14px;
+            --radius-lg: 22px;
+            --radius-xl: 28px;
             --transition: 0.3s ease;
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             color: var(--text);
-            line-height: 1.7;
-            font-size: 16px;
+            line-height: 1.55;
+            font-size: 16.5px;
             background: var(--white);
             -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
         img { max-width: 100%; height: auto; display: block; }
@@ -284,21 +287,31 @@
         a:hover { color: var(--primary-hover); }
         p a:not(.btn), li a:not(.btn) { text-decoration: underline; text-underline-offset: 0.15em; }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .container { max-width: 1180px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3.5rem); }
 
-        h1, h2, h3, h4 { font-weight: 700; line-height: 1.3; color: var(--text); }
-        h1 { font-size: clamp(2rem, 5vw, 2.8rem); }
-        h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin-bottom: 1rem; }
-        h3 { font-size: 1.2rem; }
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.08; letter-spacing: -0.025em; color: var(--text); }
+        h1 { font-size: clamp(2.55rem, 5.4vw, 4.25rem); letter-spacing: -0.035em; }
+        h2 { font-size: clamp(1.9rem, 3.8vw, 2.75rem); margin-bottom: 1rem; }
+        h3 { font-size: 1.2rem; letter-spacing: -0.012em; }
 
         .section-label {
-            display: inline-block;
-            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            font-size: 0.78rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.14em;
             color: var(--primary);
             margin-bottom: 0.5rem;
+        }
+        .section-label::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--primary);
+            flex: 0 0 auto;
         }
 
         .section-desc {
@@ -308,7 +321,7 @@
             margin-bottom: 3rem;
         }
 
-        section { padding: 4.5rem 0; }
+        section { padding: clamp(3.5rem, 8vw, 7rem) 0; }
 
         .placeholder-hint {
             background: #FFF3CD;
@@ -325,11 +338,14 @@
         .nav {
             position: sticky;
             top: 0;
-            background: var(--white);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: none;
             z-index: 1000;
-            border-top: 4px solid var(--primary);
-            padding: 1.1rem 0;
+            border-top: 4px solid var(--primary-dark);
+            border-bottom: 1px solid var(--border);
+            padding: 0.85rem 0;
         }
         .back-to-top {
             position: fixed;
@@ -368,7 +384,7 @@
             display: flex;
             align-items: center;
             gap: 0.45rem;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--text);
             text-decoration: none;
@@ -380,8 +396,19 @@
             display: block;
             flex: 0 0 auto;
         }
-        .logo-name { color: var(--text); }
-        .logo-name span { color: var(--primary); }
+        .logo-name {
+            color: var(--text);
+            display: grid;
+            line-height: 1.05;
+        }
+        .logo-word span { color: var(--primary); }
+        .logo-name small {
+            margin-top: 0.15rem;
+            color: var(--text-lighter);
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0;
+        }
         .logo-icon {
             width: 40px;
             height: 40px;
@@ -396,22 +423,22 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 0.25rem;
+            gap: 0.9rem;
             align-items: center;
         }
         .nav-links a {
-            padding: 0.5rem 1rem;
-            font-size: 0.95rem;
+            padding: 0.45rem 0.55rem;
+            font-size: 0.92rem;
             font-weight: 500;
             color: var(--text-light);
-            border-radius: 8px;
+            border-radius: 999px;
             transition: all var(--transition);
         }
         .nav-links a:hover { color: var(--primary); background: var(--bg-warm); }
         .nav-cta {
             background: var(--primary) !important;
             color: var(--white) !important;
-            padding: 0.5rem 1.25rem !important;
+            padding: 0.62rem 1.35rem !important;
         }
         .nav-cta:hover { background: var(--primary-hover) !important; }
         .nav-toggle {
@@ -434,42 +461,65 @@
 
         /* ========== HERO ========== */
         .hero {
-            padding: 4rem 0 4rem;
-            background: linear-gradient(160deg, var(--bg-warm) 0%, #F5E0E0 40%, var(--bg-warm) 100%);
-        }
-        .hero-inner {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-        .hero-content {
-            flex: 1;
-        }
-        .hero h1 { margin-bottom: 1.25rem; }
-        .hero-logo-wrap {
-            flex-shrink: 0;
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
+            padding: clamp(3.5rem, 8vw, 6.5rem) 0;
+            background: var(--primary-light);
             overflow: hidden;
         }
-        .hero-logo {
+        .hero-inner {
+            display: grid;
+            grid-template-columns: minmax(0, 1.28fr) minmax(260px, 0.72fr);
+            align-items: center;
+            gap: clamp(2rem, 5vw, 4.5rem);
+        }
+        .hero-content {
+            min-width: 0;
+        }
+        .hero h1 { margin-bottom: 1.35rem; max-width: 12.5ch; }
+        .hero-mascot {
+            aspect-ratio: 1 / 1;
+            max-width: 380px;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center 33%;
-            transform: scale(1.55);
-            mix-blend-mode: multiply;
+            margin-left: auto;
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+        .hero-mascot-ring {
+            position: absolute;
+            inset: 0;
+            border: 1.5px solid var(--primary);
+            border-radius: 50%;
+            opacity: 0.35;
+        }
+        .hero-mascot-ring.r2 {
+            inset: 22px;
+            opacity: 0.2;
+        }
+        .hero-mascot-art {
+            width: 64%;
+            aspect-ratio: 1 / 1;
+            background: var(--white);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--accent-soft);
+            box-shadow: 0 14px 40px -12px rgba(155,31,38,.25);
+            position: relative;
+            z-index: 1;
+        }
+        .hero-mascot-art svg {
+            width: 70%;
+            height: 70%;
         }
         .hero h1 em {
             font-style: normal;
             color: var(--primary);
         }
         .hero-sub {
-            font-size: 1.15rem;
+            font-size: 1.13rem;
             color: var(--text-light);
-            max-width: 580px;
-            margin: 0 0 2.5rem;
+            max-width: 52ch;
+            margin: 0 0 2rem;
         }
         .hero-ctas {
             display: flex;
@@ -479,14 +529,15 @@
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 0.5rem;
-            padding: 0.85rem 1.75rem;
-            border-radius: var(--radius);
+            padding: 0.9rem 1.55rem;
+            border-radius: 999px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all var(--transition);
-            border: none;
+            border: 1.5px solid transparent;
             text-decoration: none;
         }
         .btn-primary {
@@ -495,7 +546,7 @@
         }
         .btn-primary:hover { background: var(--primary-hover); color: var(--white); transform: translateY(-1px); box-shadow: var(--shadow-md); }
         .btn-outline {
-            background: transparent;
+            background: var(--white);
             color: var(--primary);
             border: 2px solid var(--primary);
         }
@@ -506,9 +557,11 @@
         }
         .btn-whatsapp:hover { background: #075f2f; color: var(--white); transform: translateY(-1px); }
         .hero-trust {
-            margin-top: 2.5rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(155,31,38,.15);
             display: flex;
-            gap: 2rem;
+            gap: 1.25rem 1.65rem;
             flex-wrap: wrap;
             font-size: 0.9rem;
             color: var(--text-light);
@@ -532,7 +585,7 @@
         }
         .vorteil-card {
             background: var(--white);
-            padding: 2rem;
+            padding: 1.75rem;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border);
@@ -540,9 +593,10 @@
         }
         .vorteil-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
         .vorteil-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--primary-light);
+            width: 42px;
+            height: 42px;
+            background: var(--primary);
+            color: var(--white);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -550,6 +604,7 @@
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
+        .vorteil-icon svg { fill: currentColor; }
         .vorteil-card h3 { margin-bottom: 0.5rem; }
         .vorteil-card p { color: var(--text-light); font-size: 0.95rem; }
 
@@ -572,7 +627,7 @@
         .fact-item {
             background: var(--white);
             border: 1px solid var(--border);
-            border-radius: var(--radius);
+            border-radius: var(--radius-lg);
             padding: 1.25rem;
             box-shadow: var(--shadow-sm);
         }
@@ -599,7 +654,7 @@
         .angebot-block {
             background: var(--white);
             border-radius: var(--radius-lg);
-            padding: 2rem;
+            padding: 1.75rem;
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border);
         }
@@ -622,7 +677,7 @@
         .faecher-list li {
             background: var(--primary-light);
             padding: 0.4rem 0.9rem;
-            border-radius: 20px;
+            border-radius: 999px;
             font-size: 0.9rem;
             color: var(--text);
             border: 1px solid var(--border);
@@ -670,11 +725,11 @@
         }
         .step-number {
             flex-shrink: 0;
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             background: var(--primary);
             color: var(--white);
-            border-radius: 50%;
+            border-radius: 999px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -701,8 +756,9 @@
         .but-who {
             background: var(--white);
             border-radius: var(--radius-lg);
-            padding: 2rem;
+            padding: 1.75rem;
             box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
         }
         .but-who h3 { margin-bottom: 1rem; }
         .but-list {
@@ -725,8 +781,9 @@
         .but-how {
             background: var(--white);
             border-radius: var(--radius-lg);
-            padding: 2rem;
+            padding: 1.75rem;
             box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
         }
         .but-how h3 { margin-bottom: 1rem; }
         .but-how ol {
@@ -950,7 +1007,7 @@
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.3s ease;
         }
-        .faq-item.active .faq-answer { max-height: 300px; }
+        .faq-item.active .faq-answer { max-height: 520px; }
         .faq-answer p {
             padding-bottom: 1.25rem;
             color: var(--text-light);
@@ -1006,7 +1063,7 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(26, 127, 126, 0.15);
+            box-shadow: 0 0 0 3px rgba(155, 31, 38, 0.14);
         }
         .form-group textarea { resize: vertical; min-height: 100px; }
         .form-check {
@@ -1169,7 +1226,6 @@
 
         @media (min-width: 768px) {
             section { padding: 5.5rem 0; }
-            .hero-inner { gap: 3.5rem; }
             .ablauf-steps { grid-template-columns: repeat(3, 1fr); }
             .step { flex-direction: column; text-align: center; align-items: center; }
             .kontakt-grid { grid-template-columns: 1.3fr 1fr; }
@@ -1187,7 +1243,7 @@
 
         @media (max-width: 767px) {
             .hero-inner {
-                flex-direction: column;
+                grid-template-columns: 1fr;
                 text-align: center;
             }
             .hero-content {
@@ -1197,10 +1253,9 @@
             .hero h1 {
                 font-size: clamp(1.85rem, 7vw, 2.15rem);
                 overflow-wrap: anywhere;
-            }
-            .hero-logo-wrap {
-                width: 180px;
-                height: 180px;
+                max-width: 13ch;
+                margin-left: auto;
+                margin-right: auto;
             }
             .hero-sub {
                 max-width: 100%;
@@ -1209,6 +1264,12 @@
                 font-size: 1.05rem;
             }
             .hero-ctas { justify-content: center; }
+            .hero-mascot {
+                max-width: 260px;
+                margin: 0 auto;
+                order: 2;
+            }
+            .hero-mascot-art { width: 66%; }
             .hero-trust {
                 justify-content: center;
                 gap: 0.9rem 1.25rem;
@@ -1254,7 +1315,7 @@
 <!-- ==================== NAVIGATION ==================== -->
 <nav class="nav" id="nav">
     <div class="container nav-inner">
-        <a href="#" class="logo"><img src="/favicon.svg" alt="" class="logo-mark" width="28" height="28" aria-hidden="true"><span class="logo-name">School<span>Leo</span></span></a>
+        <a href="#" class="logo"><img src="favicon.svg" alt="" class="logo-mark" width="28" height="28" aria-hidden="true"><span class="logo-name"><span class="logo-word">School<span>Leo</span></span><small>Nachhilfe · Plau &amp; Lübz</small></span></a>
         <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
@@ -1275,9 +1336,6 @@
 <!-- ==================== HERO ==================== -->
 <section class="hero" id="hero">
     <div class="container hero-inner">
-        <div class="hero-logo-wrap">
-            <img src="img/logo.png" alt="SchoolLeo Löwe" class="hero-logo" width="500" height="500" fetchpriority="high">
-        </div>
         <div class="hero-content">
         <h1>Nachhilfe in <em>Plau am See</em> und Lübz</h1>
         <p class="hero-sub">
@@ -1312,6 +1370,40 @@
             </span>
         </div>
         </div><!-- /.hero-content -->
+        <div class="hero-mascot" aria-hidden="true">
+            <div class="hero-mascot-ring"></div>
+            <div class="hero-mascot-ring r2"></div>
+            <div class="hero-mascot-art">
+                <svg viewBox="0 0 120 120" fill="none">
+                    <g stroke="#9B1F26" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M60 16 L57 5"></path><path d="M60 16 L63 5"></path>
+                        <path d="M44 22 L36 12"></path><path d="M76 22 L84 12"></path>
+                        <path d="M30 36 L17 30"></path><path d="M90 36 L103 30"></path>
+                        <path d="M24 56 L9 56"></path><path d="M96 56 L111 56"></path>
+                        <path d="M30 76 L17 82"></path><path d="M90 76 L103 82"></path>
+                        <path d="M44 90 L36 100"></path><path d="M76 90 L84 100"></path>
+                        <circle cx="60" cy="56" r="32" fill="#FBEDEC"></circle>
+                    </g>
+                    <g fill="#9B1F26">
+                        <circle cx="50" cy="50" r="3"></circle>
+                        <circle cx="70" cy="50" r="3"></circle>
+                    </g>
+                    <g stroke="#9B1F26" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                        <path d="M60 60 L56 66 L60 68 L64 66 Z" fill="#9B1F26"></path>
+                        <path d="M60 68 L60 72"></path>
+                        <path d="M52 72 Q60 78 68 72"></path>
+                        <path d="M40 32 Q44 26 50 30" fill="#FBEDEC"></path>
+                        <path d="M80 32 Q76 26 70 30" fill="#FBEDEC"></path>
+                    </g>
+                    <g stroke="#9B1F26" stroke-width="1.4" stroke-linecap="round" opacity=".7">
+                        <path d="M44 64 L34 62"></path>
+                        <path d="M44 66 L34 68"></path>
+                        <path d="M76 64 L86 62"></path>
+                        <path d="M76 66 L86 68"></path>
+                    </g>
+                </svg>
+            </div>
+        </div>
     </div>
     <!-- Social Proof Bar -->
     <div class="container" style="margin-top: 1.5rem; text-align: center;">
