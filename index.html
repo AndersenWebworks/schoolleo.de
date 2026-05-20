@@ -855,84 +855,150 @@
         .step-content p { color: var(--text-light); font-size: 0.95rem; }
 
         /* ========== BUT ========== */
-        .but-section { background: var(--bg-section); }
+        .but-section {
+            background: var(--primary-light);
+        }
+        .but-head {
+            max-width: 780px;
+            margin-bottom: 2rem;
+        }
+        .but-head h2 {
+            margin-bottom: 0.85rem;
+            text-wrap: balance;
+        }
         .but-intro {
             font-size: 1.05rem;
             color: var(--text-light);
-            max-width: 700px;
-            margin-bottom: 2rem;
+            max-width: 680px;
+            margin: 0;
         }
         .but-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: start;
+            gap: 1.25rem;
+            align-items: stretch;
         }
-        .but-who {
+        .but-card {
             background: var(--white);
             border-radius: var(--radius-lg);
-            padding: 1.75rem;
+            padding: clamp(1.55rem, 3vw, 2rem);
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border);
         }
-        .but-who h3 { margin-bottom: 1rem; }
-        .but-list {
-            list-style: none;
+        .but-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.15rem;
         }
-        .but-list li {
-            padding: 0.6rem 0;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
+        .but-check-list {
+            list-style: none;
+            display: grid;
+            gap: 0.7rem;
+        }
+        .but-check-list li {
+            display: grid;
+            grid-template-columns: 1.4rem 1fr;
             gap: 0.75rem;
             font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.5;
         }
-        .but-list li:last-child { border-bottom: none; }
-        .but-check {
-            color: var(--green);
-            font-weight: 700;
-            font-size: 1.1rem;
+        .but-check-list svg {
+            width: 1.15rem;
+            height: 1.15rem;
+            color: var(--primary);
+            margin-top: 0.1rem;
+            stroke: currentColor;
         }
-        .but-how {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 1.75rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border);
+        .but-steps {
+            list-style: none;
+            counter-reset: but-step;
+            display: grid;
+            gap: 1rem;
         }
-        .but-how h3 { margin-bottom: 1rem; }
-        .but-how ol {
-            padding-left: 1.5rem;
-        }
-        .but-how li {
-            margin-bottom: 0.75rem;
+        .but-steps li {
+            counter-increment: but-step;
+            display: grid;
+            grid-template-columns: 1.55rem 1fr;
+            gap: 0.75rem;
             font-size: 0.95rem;
+            line-height: 1.55;
             color: var(--text-light);
         }
-        .but-highlight {
-            margin-top: 2rem;
-            padding: 1.25rem 1.5rem;
-            background: var(--primary-light);
+        .but-steps li::before {
+            content: counter(but-step);
+            width: 1.4rem;
+            height: 1.4rem;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--primary);
+            color: var(--white);
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-top: 0.1rem;
+        }
+        .but-note {
+            margin-top: 1.75rem;
+            padding: 1.15rem 1.35rem;
+            background: var(--white);
             border-left: 4px solid var(--primary);
             border-radius: 0 var(--radius) var(--radius) 0;
-            font-size: 0.95rem;
-            color: var(--text);
-        }
-        .but-local {
-            margin: 2rem 0;
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            padding: 1.75rem;
             box-shadow: var(--shadow-sm);
-        }
-        .but-local h3 { margin-bottom: 0.75rem; }
-        .but-local p {
+            font-size: 0.95rem;
             color: var(--text-light);
-            font-size: 0.96rem;
-            margin-bottom: 0.75rem;
+            line-height: 1.55;
         }
-        .but-local p:last-child { margin-bottom: 0; }
+        .but-note strong,
+        .but-note a {
+            color: var(--primary);
+        }
+        .price-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+        .price-card {
+            background: var(--primary);
+            color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: clamp(2rem, 4vw, 2.5rem);
+            min-height: 15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+        }
+        .price-card .label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.78);
+            margin-bottom: 1.15rem;
+        }
+        .price-card .amount {
+            font-size: clamp(3.5rem, 8vw, 5rem);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: 0;
+        }
+        .price-card .unit {
+            font-size: 0.42em;
+            margin-left: 0.35rem;
+            opacity: 0.9;
+        }
+        .price-card .desc {
+            margin-top: 1.15rem;
+            color: rgba(255,255,255,0.86);
+            line-height: 1.55;
+        }
+        .price-foot {
+            margin-top: 1.25rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
 
         /* ========== TESTIMONIALS ========== */
         .testimonial-grid {
@@ -1336,7 +1402,6 @@
             .angebot-glance-grid { grid-template-columns: repeat(2, 1fr); }
             .angebot-extra-grid { grid-template-columns: repeat(2, 1fr); }
             .standort-grid { grid-template-columns: repeat(2, 1fr); }
-            .but-grid { grid-template-columns: repeat(2, 1fr); }
             .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
             .form-row { grid-template-columns: repeat(2, 1fr); }
         }
@@ -1348,6 +1413,8 @@
             .kontakt-grid { grid-template-columns: 1.3fr 1fr; }
             .footer-grid { grid-template-columns: repeat(3, 1fr); }
             .ueber-grid { grid-template-columns: auto 1fr; }
+            .but-grid,
+            .price-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (min-width: 900px) {
@@ -1802,63 +1869,51 @@
 <!-- ==================== BuT-FÖRDERUNG ==================== -->
 <section id="but" class="but-section">
     <div class="container">
-        <span class="section-label">BuT-Förderung</span>
-        <h2>BuT-Lernförderung im Landkreis Ludwigslust-Parchim</h2>
-        <p class="but-intro">
-            Viele Familien wissen gar nicht, dass ihnen das Bildungs- und Teilhabepaket (BuT) zusteht. Wenn die Schule den Bedarf bestätigt, kann Nachhilfe in Plau am See und Lübz komplett über BuT bezahlt werden.
-        </p>
-        <div class="but-local fade-in">
-            <h3>Was bedeutet das für Familien aus Plau am See und Lübz?</h3>
-            <p>Familien im Landkreis Ludwigslust-Parchim können Lernförderung beantragen, wenn sie zum Beispiel Bürgergeld, Sozialhilfe, Wohngeld, Kinderzuschlag oder Leistungen nach dem Asylbewerberleistungsgesetz erhalten.</p>
-            <p>Wichtig ist die Reihenfolge: Erst bestätigt die Schule den Förderbedarf, dann melden Sie sich bei SchoolLeo, damit unsere Unterlagen direkt mit eingereicht werden können.</p>
-            <p>Offizielle Informationen zur zuständigen Stelle finden Sie beim <a href="https://www.kreis-lup.de/Wer-macht-was-/Fachdienst-Soziales/?La=1" target="_blank" rel="noopener">Landkreis Ludwigslust-Parchim, Fachdienst Soziales</a>.</p>
+        <div class="but-head">
+            <span class="section-label">BuT-Förderung</span>
+            <h2>Nachhilfe kann <span class="text-em">kostenlos</span>&nbsp;sein.</h2>
+            <p class="but-intro">
+                Viele Familien wissen gar nicht, dass ihnen das Bildungs- und Teilhabepaket (BuT) zusteht. Wer bestimmte Sozialleistungen bezieht, bekommt Nachhilfe in Plau am See und Lübz komplett vom Staat bezahlt.
+            </p>
         </div>
         <div class="but-grid">
-            <div class="but-who fade-in">
+            <div class="but-card fade-in">
                 <h3>Wer hat Anspruch?</h3>
-                <ul class="but-list">
-                    <li><span class="but-check">&#10003;</span> Bürgergeld (SGB II)</li>
-                    <li><span class="but-check">&#10003;</span> Sozialhilfe (SGB XII)</li>
-                    <li><span class="but-check">&#10003;</span> Wohngeld</li>
-                    <li><span class="but-check">&#10003;</span> Kinderzuschlag</li>
-                    <li><span class="but-check">&#10003;</span> Leistungen nach dem Asylbewerberleistungsgesetz</li>
+                <ul class="but-check-list">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Bürgergeld (SGB II)</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Sozialhilfe (SGB XII)</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Wohngeld</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Kinderzuschlag</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Leistungen nach dem Asylbewerberleistungsgesetz</span></li>
                 </ul>
             </div>
-            <div class="but-how fade-in">
+            <div class="but-card fade-in">
                 <h3>So läuft der Antrag</h3>
-                <ol>
+                <ol class="but-steps">
                     <li>Die Schule Ihres Kindes bestätigt, dass Lernförderung nötig ist (ein kurzes Formular).</li>
-                    <li>Mit der Schulbestätigung melden Sie sich bei SchoolLeo. Wir füllen unsere Unterlagen aus, die für den Antrag nötig sind.</li>
-                    <li>Alle Dokumente zusammen reichen Sie beim Jobcenter oder der Wohngeldstelle des Landkreises ein.</li>
+                    <li>Mit der Bestätigung melden Sie sich bei SchoolLeo. Wir füllen unsere Unterlagen aus.</li>
+                    <li>Alle Dokumente reichen Sie beim Jobcenter oder der Wohngeldstelle ein.</li>
                     <li>Nach Bewilligung beginnt der Unterricht – für Sie kostenfrei.</li>
                 </ol>
-                <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--text-light);">
-                    <strong>Wichtig:</strong> Bitte reichen Sie den Schulantrag nicht ohne unsere Unterlagen ein – sonst wird der Antrag unvollständig zurückgeschickt. Melden Sie sich einfach bei uns, wir kümmern uns gemeinsam darum.
-                </p>
-                <p style="margin-top: 0.75rem; font-size: 0.95rem; color: var(--text-light);">
-                    <strong>Hinweis:</strong> Die BuT-Abrechnung gilt für den Landkreis Ludwigslust-Parchim. Familien aus anderen Landkreisen sind als Selbstzahler herzlich willkommen.
-                </p>
-                <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-lighter);">
-                    Offizielle Informationen zur zuständigen Stelle finden Sie beim <a href="https://www.kreis-lup.de/Wer-macht-was-/Fachdienst-Soziales/?La=1" target="_blank" rel="noopener">Landkreis Ludwigslust-Parchim, Fachdienst Soziales</a>.
-                </p>
             </div>
         </div>
-        <!-- Preisvergleich -->
-        <div class="fade-in" style="margin-top: 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
-            <div style="background: var(--primary); color: var(--white); border-radius: var(--radius-lg); padding: 2.5rem 2rem; text-align: center;">
-                <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.85; margin-bottom: 0.5rem;">Mit BuT-Förderung</div>
-                <div style="font-size: 3.5rem; font-weight: 700; line-height: 1; margin-bottom: 0.75rem;">0 EUR</div>
-                <div style="font-size: 1.05rem; opacity: 0.9;">Der Staat übernimmt alles.<br>Komplett kostenlos.</div>
+        <div class="but-note fade-in">
+            <strong>Wichtig:</strong> Bitte reichen Sie den Schulantrag nicht ohne unsere Unterlagen ein – sonst wird der Antrag unvollständig zurückgeschickt. Die BuT-Abrechnung gilt für den Landkreis <strong>Ludwigslust-Parchim</strong>. Familien aus anderen Landkreisen sind als Selbstzahler herzlich willkommen. <a href="https://www.kreis-lup.de/Wer-macht-was-/Fachdienst-Soziales/?La=1" target="_blank" rel="noopener">Offizielle Infos zum Fachdienst Soziales</a>
+        </div>
+
+        <div class="price-grid fade-in">
+            <div class="price-card">
+                <div class="label">Mit BuT-Förderung</div>
+                <div class="amount">0<span class="unit">EUR</span></div>
+                <div class="desc">Der Staat übernimmt alle Kosten. Komplett kostenfrei – bei vollem Angebot.</div>
             </div>
-            <div style="background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem 2rem; text-align: center;">
-                <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 0.5rem;">Selbstzahler</div>
-                <div style="font-size: 3.5rem; font-weight: 700; line-height: 1; color: var(--primary); margin-bottom: 0.75rem;">25 EUR</div>
-                <div style="font-size: 1.05rem; color: var(--text-light);">Pro Einheit (45 Min.)<br>Keine MwSt., keine Zusatzkosten.</div>
+            <div class="price-card">
+                <div class="label">Selbstzahler</div>
+                <div class="amount">25<span class="unit">EUR</span></div>
+                <div class="desc">Pro Einheit (45 Min.). Umsatzsteuerbefreit nach § 4 Nr. 21 UStG.</div>
             </div>
         </div>
-        <p style="margin-top: 1.25rem; font-size: 0.9rem; color: var(--text-lighter); text-align: center;">
-            Einzel- und Gruppenunterricht zum gleichen Preis · Keine Vertragsbindung · Kündigung mit 4 Wochen Frist
-        </p>
+        <div class="price-foot">Einzel- und Gruppenunterricht zum gleichen Preis · keine Vertragsbindung · 4 Wochen Kündigungsfrist</div>
     </div>
 </section>
 
