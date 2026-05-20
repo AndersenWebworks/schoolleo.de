@@ -520,6 +520,42 @@
             font-style: normal;
             color: var(--primary);
         }
+        .text-em {
+            color: var(--primary);
+            font-style: italic;
+            font-weight: 700;
+        }
+        .student-section {
+            background: var(--primary-light);
+            padding: clamp(3.5rem, 7vw, 5rem) 0;
+        }
+        .student-inner {
+            text-align: center;
+            max-width: 1120px;
+        }
+        .student-heading {
+            margin: 0 auto 1.25rem;
+            font-size: clamp(2.7rem, 5.1vw, 4.25rem);
+            line-height: 1.04;
+            letter-spacing: 0;
+            max-width: 100%;
+            text-wrap: normal;
+        }
+        .student-copy {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .student-copy p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        .student-copy .student-cta-note {
+            font-size: 1.05rem;
+            color: var(--text);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
         .hero-sub {
             font-size: 1.13rem;
             color: var(--text-light);
@@ -1246,6 +1282,10 @@
             .mobile-cta { display: none; }
         }
 
+        @media (min-width: 1200px) {
+            .student-heading { white-space: nowrap; }
+        }
+
         @media (max-width: 767px) {
             .hero-inner {
                 grid-template-columns: 1fr;
@@ -1281,6 +1321,10 @@
             }
             .hero-trust span {
                 max-width: 100%;
+            }
+            .student-heading {
+                font-size: clamp(2.25rem, 11vw, 3rem);
+                max-width: 9.5ch;
             }
             .mobile-cta .btn {
                 min-width: 0;
@@ -1475,23 +1519,25 @@
 </section>
 
 <!-- ==================== FÜR SCHÜLER ==================== -->
-<section style="background: var(--primary-light); padding: 3rem 0;">
-    <div class="container" style="text-align: center; max-width: 680px;">
+<section id="fuer-dich" class="student-section">
+    <div class="container student-inner">
         <span class="section-label">Für dich</span>
-        <h2 style="margin-bottom: 1rem;">Du hast keinen Bock auf Schule?</h2>
-        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 1rem;">
-            Geht vielen so. Mathe nervt, Physik macht keinen Sinn, und in Deutsch schreibst du lieber Nachrichten als Aufsätze. Das ist okay.
-        </p>
-        <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 1rem;">
-            Bei SchoolLeo geht es nicht darum, dass du plötzlich Schule liebst. Sondern darum, dass du den Stoff kapierst, deine Noten besser werden und du weniger Stress hast. <strong style="color: var(--text);">Keine Predigt. Keine Vorwürfe. Einfach Hilfe.</strong>
-        </p>
-        <p style="font-size: 1.05rem; color: var(--text); font-weight: 500; margin-bottom: 1.5rem;">
-            Und ja – du darfst auch selbst anrufen oder schreiben. Du musst nicht warten, bis deine Eltern das machen.
-        </p>
-        <a href="https://wa.me/4915236935769?text=Hi!%20Ich%20brauche%20Nachhilfe%20in%20____%20(Klasse%20__).%20K%C3%B6nnen%20wir%20kurz%20telefonieren%3F" class="btn btn-whatsapp" target="_blank" rel="noopener" style="font-size: 0.95rem;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Per WhatsApp anfragen
-        </a>
+        <h2 class="student-heading">Du hast keinen Bock <span class="text-em">auf Schule?</span></h2>
+        <div class="student-copy">
+            <p>
+                Geht vielen so. Mathe nervt, Physik macht keinen Sinn, und in Deutsch schreibst du lieber Nachrichten als Aufsätze. Das ist okay.
+            </p>
+            <p>
+                Bei SchoolLeo geht es nicht darum, dass du plötzlich Schule liebst. Sondern darum, dass du den Stoff kapierst, deine Noten besser werden und du weniger Stress hast. <strong style="color: var(--text);">Keine Predigt. Keine Vorwürfe. Einfach Hilfe.</strong>
+            </p>
+            <p class="student-cta-note">
+                Und ja – du darfst auch selbst anrufen oder schreiben. Du musst nicht warten, bis deine Eltern das machen.
+            </p>
+            <a href="https://wa.me/4915236935769?text=Hi!%20Ich%20brauche%20Nachhilfe%20in%20____%20(Klasse%20__).%20K%C3%B6nnen%20wir%20kurz%20telefonieren%3F" class="btn btn-whatsapp" target="_blank" rel="noopener" style="font-size: 0.95rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Per WhatsApp anfragen
+            </a>
+        </div>
     </div>
 </section>
 
